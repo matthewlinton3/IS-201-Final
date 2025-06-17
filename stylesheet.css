@@ -1,0 +1,100 @@
+/* Global styles */
+body {
+  font-family: 'Muli', sans-serif;
+  color: #343a40;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 2.25rem;
+  color: #0d6efd;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Social icons */
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #0d6efd;
+}
+
+.social-icons a:hover {
+  color: #0a58ca;
+}
+
+/* Section layout */
+.resume-section {
+  padding: 4rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.resume-section-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.text-primary {
+  color: #0d6efd !important;
+}
+
+/* Sidebar profile image */
+.img-profile {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Sidebar spacing and content shift (desktop) */
+@media (min-width: 992px) {
+  body {
+    padding-left: 260px;
+  }
+
+  #sideNav {
+    height: auto;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 991px) {
+  body {
+    padding-top: 130px; /* So top bar doesn't block content */
+  }
+
+  #sideNav {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .img-profile {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0.5rem;
+  }
+}

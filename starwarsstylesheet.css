@@ -1,0 +1,112 @@
+/* Body - Star Wars Galaxy Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-color: #000;
+    color: #ffe81f;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Navigation */
+.rnav {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.rnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rnav a {
+    text-decoration: none;
+    color: #ffe81f;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.rnav a:hover {
+    color: #00bcd4;
+}
+
+/* Game container */
+.game-container,
+#game-area {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ffe81f;
+    text-align: center;
+    width: 400px;
+}
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    color: #ffe81f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Riddle Text */
+.riddle {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Input Field */
+input {
+    padding: 12px;
+    width: 80%;
+    font-size: 18px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 2px solid #ffe81f;
+    background-color: #111;
+    color: #ffe81f;
+}
+
+input:focus {
+    background-color: #222;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ffe81f;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffc107;
+}
+
+/* Result Text */
+.result {
+    margin-top: 15px;
+    font-size: 18px;
+}

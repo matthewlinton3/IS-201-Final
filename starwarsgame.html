@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Riddle Game</title>
+    <link rel="stylesheet" href="starwarsstylesheet.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="rnav">
+        <ul>
+            <li><a href="index.html">About Me</a> |</li>
+            <li><a href="resume.html">Resume</a> |</li>
+            <li><a href="mywork.html">My Work</a> |</li>
+            <li><a href="starwarsgame.html">Star Wars Game</a></li>
+        </ul>
+    </div>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <h1>Welcome to the Star Wars Riddle Game!</h1>
+        <button onclick="startGame()">Begin Your Jedi Training</button>
+    </div>
+
+    <!-- Game Area -->
+    <div id="game-area" style="display: none;">
+        <h1>Star Wars Riddle Challenge</h1>
+        <div id="riddle" class="riddle"></div>
+        <input type="text" id="userAnswer" placeholder="Your answer here">
+        <button onclick="checkAnswer()">Submit Answer</button>
+        <div id="result" class="result"></div>
+        <button onclick="nextRiddle()">Next Riddle</button>
+    </div>
+
+    <script>
+        const starWarsRiddles = [
+            { question: "Who is Luke Skywalker's father?", answer: "Darth Vader" },
+            { question: "What is the name of Han Solo’s ship?", answer: "Millennium Falcon" },
+            { question: "What color is Mace Windu’s lightsaber?", answer: "Purple" },
+            { question: "Who trained Obi-Wan Kenobi?", answer: "Qui-Gon Jinn" },
+            { question: "What planet is Princess Leia from?", answer: "Alderaan" }
+        ];
+
+        let currentRiddleIndex = 0;
+
+        function startGame() {
+            document.querySelector('.game-container').style.display = 'none';
+            document.getElementById('game-area').style.display = 'block';
+            displayRiddle();
+        }
+
+        function displayRiddle() {
+            document.getElementById('riddle').textContent = starWarsRiddles[currentRiddleIndex].question;
+            document.getElementById('result').textContent = '';
+            document.getElementById('userAnswer').value = '';
+        }
+
+        function checkAnswer() {
+            const userAnswer = document.getElementById('userAnswer').value.trim().toLowerCase();
+            const correctAnswer = starWarsRiddles[currentRiddleIndex].answer.toLowerCase();
+
+            if (userAnswer === correctAnswer) {
+                document.getElementById('result').textContent = "Correct! The Force is strong with you.";
+                document.getElementById('result').style.color = "green";
+            } else {
+                document.getElementById('result').textContent = "Not quite... try again, young Padawan!";
+                document.getElementById('result').style.color = "red";
+            }
+        }
+
+        function nextRiddle() {
+            currentRiddleIndex = (currentRiddleIndex + 1) % starWarsRiddles.length;
+            displayRiddle();
+        }
+    </script>
+
+</body>
+</html>
